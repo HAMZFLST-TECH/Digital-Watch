@@ -1,0 +1,123 @@
+/* Built by: HAMZATAYYAB AKA HAMZFLST-TECH */
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  background: linear-gradient(345deg, #10fe83 0%, #efef12 50%, #ff0000 100%);
+}
+
+.container {
+  height: 180px;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container::before {
+  content: "";
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background: #10fe838e;
+  border-radius: 5px;
+  z-index: -1;
+  top: -50px;
+  left: -50px;
+}
+
+.container::after {
+  content: "";
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  background: #ff4d00;
+  border-radius: 5px;
+  z-index: -1;
+  right: -30px;
+  bottom: -50px;
+}
+
+.clock {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(235, 0, 255, 0.11);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.clock span {
+  font-size: 80px;
+  width: 110px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+
+.clock span::after {
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#hrs::after {
+  content: "HOURS";
+}
+
+#min::after {
+  content: "MINS";
+}
+
+#sec::after {
+  content: "SEC";
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 90%;
+    height: 140px;
+  }
+
+  .clock span {
+    font-size: 40px;
+    width: 80px;
+  }
+
+  .clock span::after {
+    font-size: 10px;
+    bottom: -10px;
+  }
+
+  .container::before,
+  .container::after {
+    width: 100px;
+    height: 100px;
+  }
+
+  .container::before {
+    top: -30px;
+    left: -20px;
+  }
+  .container::after {
+    right: -10px;
+    bottom: -30px;
+  }
+}
+
+
+/* Built by: HAMZATAYYAB AKA HAMZFLST-TECH */
